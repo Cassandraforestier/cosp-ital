@@ -3,7 +3,7 @@ import { Users, Heart, Sparkles, Calendar } from "lucide-react";
 const About = () => {
   const stats = [
     { icon: Users, value: "20+", label: "Cosplayers actifs" },
-    { icon: Heart, value: "100+", label: "Visites réalisées" },
+    { icon: Heart, value: "10+", label: "Visites réalisées" },
     { icon: Calendar, value: "2023", label: "Année de création" },
     { icon: Sparkles, value: "∞", label: "Sourires partagés" },
   ];

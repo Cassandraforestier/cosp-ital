@@ -5,16 +5,16 @@ const JoinUs = () => {
     "Faire partie d'une équipe passionnée et bienveillante",
     "Apporter de la joie aux enfants hospitalisés",
     "Participer à des événements et conventions",
-    "Développer vos compétences en cosplay",
     "Créer des souvenirs inoubliables",
-    "Intégrer une communauté soudée",
+    "Se sentir utile en mettant sa passion au service des autres",
+    "Nouer des amitiés durables avec d'autres cosplayers !",
   ];
 
   const requirements = [
     {
       icon: Heart,
       title: "Passion du cosplay",
-      description: "Avoir un costume ou être prêt à en créer un",
+      description: "Avoir un costume ! Tous les cosplays sont les bienvenus, peu importe l'univers.",
     },
     {
       icon: Users,
@@ -41,7 +41,7 @@ const JoinUs = () => {
               Devenez un <span className="text-primary">héros</span> du quotidien
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Vous êtes cosplayer et souhaitez mettre votre passion au service 
+              Vous êtes cosplayeur et souhaitez mettre votre passion au service 
               d'une belle cause ? Rejoignez l'aventure Cosp'ital !
             </p>
           </div>

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
       {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none mt-8">
         <div className="absolute top-20 left-10 text-primary/20 animate-float">
           <Star className="w-8 h-8 md:w-12 md:h-12" fill="currentColor" />
         </div>
@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Logo with animation */}
-          <div className="mb-8 animate-float">
+          <div className="mt-8 mb-8 animate-float">
             <img 
               src={logo} 
               alt="Association Cosp'ital" 

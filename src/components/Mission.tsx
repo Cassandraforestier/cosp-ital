@@ -5,7 +5,7 @@ const Mission = () => {
     {
       icon: Hospital,
       title: "Visites hospitalières",
-      description: "Nous rendons visite aux enfants hospitalisés, déguisés en leurs personnages préférés, pour leur apporter un moment de joie et d'évasion.",
+      description: "Nous rendons visite aux enfants hospitalisés, costumés en leurs personnages préférés, pour leur apporter un moment d'évasion.",
       color: "bg-primary/10 text-primary",
     },
     {
@@ -23,27 +23,27 @@ const Mission = () => {
     {
       icon: Smile,
       title: "Animations privées",
-      description: "Nous organisons des animations pour des événements caritatifs et des occasions spéciales au profit des enfants.",
+      description: "Nous pouvons organiser des animations pour des événements caritatifs et des occasions spéciales au profit des enfants.",
       color: "bg-secondary/10 text-secondary",
     },
   ];
 
   return (
-    <section id="mission" className="py-20 md:py-28 bg-gradient-warm">
+    <section id="mission" className="py-20 md:py-16 bg-gradient-warm">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <span className="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-bold mb-4">
               Ce que nous faisons
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
               Notre <span className="text-secondary">mission</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            {/* <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
               Apporter de la magie et du réconfort aux enfants hospitalisés 
               à travers la passion du cosplay et de l'univers geek.
-            </p>
+            </p> */}
           </div>
 
           {/* Mission cards */}
