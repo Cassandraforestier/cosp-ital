@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, User, X, ChevronLeft, ChevronRight } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -121,6 +122,12 @@ const Gallery = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
