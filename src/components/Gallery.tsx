@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { MapPin, User, X, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  MapPin,
+  User,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Instagram,
+} from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -15,6 +22,16 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.png";
+
+interface GalleryImage {
+  src: string;
+  alt: string;
+  category: string;
+  location: string;
+  cosplayers: string[];
+  date: string;
+}
 
 interface GalleryImage {
   src: string;
@@ -31,51 +48,87 @@ const Gallery = () => {
   const images: GalleryImage[] = [
     {
       src: gallery1,
-      alt: "Super-héros à l'hôpital Lenval",
+      alt: "Princesse Anna à Lenval",
       category: "Hôpital",
       location: "Hôpital Lenval, Nice",
-      cosplayers: ["Spider-Man", "Batman"],
-      date: "Décembre 2024",
+      cosplayers: ["Firedaxx"],
+      date: "15 novembre 2025",
     },
     {
       src: gallery2,
-      alt: "Notre mascotte Cosp'ital",
-      category: "Mascotte",
-      location: "Convention Geek, Monaco",
-      cosplayers: ["Mascotte Cosp'ital"],
-      date: "Novembre 2024",
+      alt: "Discussion dans une chambre d'hôpital",
+      category: "Hôpital",
+      location: "CHU Antibes, Antibes",
+      cosplayers: ["Morningstars.draw", "Lucie.carbone"],
+      date: "22 mars 2025",
     },
     {
       src: gallery3,
-      alt: "Princesses Disney pour les enfants",
-      category: "Disney",
+      alt: "Nos cosplayeurs à Lenval",
+      category: "Hôpital",
       location: "Hôpital Lenval, Nice",
-      cosplayers: ["Elsa", "Anna"],
-      date: "Octobre 2024",
+      cosplayers: [
+        "Kaekookies",
+        "Hyakusa",
+        "philastromech",
+        "remu_chan_",
+        "Morningstars.draw",
+        "geoffrey_flex",
+        "hansi_nephila",
+        "gwenluvurmom",
+        "Shogun_cosplay",
+      ],
+      date: "11 Octobre 2025",
     },
     {
       src: gallery4,
-      alt: "Équipe Avengers en force",
-      category: "Convention",
-      location: "Comic Con, Cannes",
-      cosplayers: ["Iron Man", "Captain America", "Thor"],
-      date: "Septembre 2024",
+      alt: "Une petite pause avec les infirmières de Lenval",
+      category: "Hôpital",
+      location: "Hôpital Lenval, Nice",
+      cosplayers: [
+        "Neytiria_",
+        "Geoffrey_flex",
+        "Firedaxx",
+        "Lucie.carbone",
+        "remu_chan_",
+      ],
+      date: "11 janvier 2025",
     },
     {
       src: gallery5,
       alt: "Animation pour les enfants",
-      category: "Événement",
-      location: "Mairie de Nice",
-      cosplayers: ["Miraculous", "Mario", "Luigi"],
-      date: "Août 2024",
+      category: "Hôpital",
+      location: "CHU Antibes, Antibes",
+      cosplayers: [
+        "Morningstars.draw",
+        "Lucie.carbone",
+        "remu_chan_",
+        "kaekookies",
+        "Shogun_cosplay",
+      ],
+      date: "22 mars 2025",
     },
     {
       src: gallery6,
-      alt: "Star Wars débarque à l'hôpital",
+      alt: "Nos cosplayeurs à Lenval",
       category: "Hôpital",
       location: "Hôpital Lenval, Nice",
-      cosplayers: ["Dark Vador", "Stormtrooper", "R2-D2"],
-      date: "Juillet 2024",
+      cosplayers: [
+        "Jokcospl",
+        "Lilas._.cosplay",
+        "Hansi_nephila",
+        "Arcadia_atlantis",
+        "Shogun_cosplay",
+      ],
+      date: "24 août 2024",
+    },
+    {
+      src: gallery7,
+      alt: "Convention Manga Mania",
+      category: "Convention",
+      location: "Mandelieu",
+      cosplayers: ["Lucie.carbone", "remu_chan_", "Shogun_cosplay"],
+      date: "2025",
     },
   ];
 
@@ -92,9 +145,13 @@ const Gallery = () => {
   const navigateImage = (direction: "prev" | "next") => {
     if (selectedImage === null) return;
     if (direction === "prev") {
-      setSelectedImage(selectedImage === 0 ? images.length - 1 : selectedImage - 1);
+      setSelectedImage(
+        selectedImage === 0 ? images.length - 1 : selectedImage - 1
+      );
     } else {
-      setSelectedImage(selectedImage === images.length - 1 ? 0 : selectedImage + 1);
+      setSelectedImage(
+        selectedImage === images.length - 1 ? 0 : selectedImage + 1
+      );
     }
   };
 
@@ -111,8 +168,8 @@ const Gallery = () => {
               Nos <span className="text-primary">moments</span> magiques
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Découvrez les sourires, les costumes et les moments de bonheur 
-              que nous partageons lors de nos interventions.
+              Découvrez les sourires, les costumes et les moments de bonheur que
+              nous partageons lors de nos interventions.
             </p>
           </div>
 
@@ -132,7 +189,10 @@ const Gallery = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {images.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={index}
+                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                >
                   <div
                     onClick={() => openLightbox(index)}
                     className="group relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-soft hover:-translate-y-2 bg-card border border-border"
@@ -168,16 +228,25 @@ const Gallery = () => {
                       {/* Cosplayers */}
                       <div className="flex items-start gap-2 text-muted-foreground text-sm">
                         <User className="w-4 h-4 text-sky flex-shrink-0 mt-0.5" />
-                        <div className="flex flex-wrap gap-1">
+                        <ol>
+                          Nos cosplayeurs de gauche à droite:
+                          <br />
                           {image.cosplayers.map((cosplayer, idx) => (
-                            <span
-                              key={idx}
-                              className="inline-block bg-sky/10 text-sky px-2 py-0.5 rounded-full text-xs font-medium"
-                            >
-                              {cosplayer}
-                            </span>
+                            <li key={idx}>
+                              <a
+                                href={"https://www.instagram.com/" + cosplayer}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline"
+                              >
+                                <div className="flex items-center gap-1">
+                                  <Instagram className="w-4 h-4" />
+                                  {cosplayer}
+                                </div>
+                              </a>
+                            </li>
                           ))}
-                        </div>
+                        </ol>
                       </div>
 
                       {/* Date */}
@@ -204,12 +273,12 @@ const Gallery = () => {
               Retrouvez plus de photos sur notre Instagram !
             </p>
             <a
-              href="https://www.instagram.com/cospital/"
+              href="https://www.instagram.com/association_cospital/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-orange-400 text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition-all hover:scale-105"
             >
-              📸 @cospital sur Instagram
+              📸 @association_cospital sur Instagram
             </a>
           </div>
         </div>
@@ -218,7 +287,7 @@ const Gallery = () => {
       {/* Lightbox */}
       {selectedImage !== null && (
         <div
-          className="fixed inset-0 z-50 bg-foreground/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-foreground/95 flex items-center justify-center p-4 overflow-y-auto"
           onClick={closeLightbox}
         >
           {/* Close button */}
@@ -281,9 +350,27 @@ const Gallery = () => {
                     <MapPin className="w-4 h-4 text-primary" />
                     <span>{images[selectedImage].location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
+                  <div className="flex  gap-2 text-muted-foreground">
                     <User className="w-4 h-4 text-sky" />
-                    <span>{images[selectedImage].cosplayers.join(", ")}</span>
+                    <span className="flex flex-col gap-2">
+                      Cosplayeurs:{" "}
+                      {images[selectedImage].cosplayers.map(
+                        (cosplayer, index) => (
+                          <div key={index} className="flex items-center gap-1">
+                            <Instagram className="w-4 h-4" />
+                            <a
+                              key={index}
+                              href={"https://www.instagram.com/" + cosplayer}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="underline"
+                            >
+                              {cosplayer}
+                            </a>
+                          </div>
+                        )
+                      )}
+                    </span>
                   </div>
                   <p className="text-muted-foreground/70">
                     📅 {images[selectedImage].date}

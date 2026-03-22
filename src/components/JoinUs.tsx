@@ -14,7 +14,8 @@ const JoinUs = () => {
     {
       icon: Heart,
       title: "Passion du cosplay",
-      description: "Avoir un costume ! Tous les cosplays sont les bienvenus, peu importe l'univers.",
+      description:
+        "Avoir un costume ! Tous les cosplays sont les bienvenus, peu importe l'univers.",
     },
     {
       icon: Users,
@@ -38,10 +39,11 @@ const JoinUs = () => {
               Rejoignez-nous
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              Devenez un <span className="text-primary">héros</span> du quotidien
+              Devenez un <span className="text-primary">héros</span> du
+              quotidien
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Vous êtes cosplayeur et souhaitez mettre votre passion au service 
+              Vous êtes cosplayeur et souhaitez mettre votre passion au service
               d'une belle cause ? Rejoignez l'aventure Cosp'ital !
             </p>
           </div>
@@ -59,7 +61,9 @@ const JoinUs = () => {
                       <req.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground mb-1">{req.title}</h4>
+                      <h4 className="font-bold text-foreground mb-1">
+                        {req.title}
+                      </h4>
                       <p className="text-muted-foreground">{req.description}</p>
                     </div>
                   </div>
@@ -76,7 +80,9 @@ const JoinUs = () => {
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                    <span className="text-foreground font-medium">{benefit}</span>
+                    <span className="text-foreground font-medium">
+                      {benefit}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -87,12 +93,12 @@ const JoinUs = () => {
           <div className="mt-12 text-center">
             <div className="bg-card p-8 md:p-10 rounded-3xl border border-border shadow-card inline-block">
               <p className="text-muted-foreground text-lg mb-6">
-                Prêt à rejoindre l'équipe ? Contactez-nous via Instagram 
-                ou par email pour nous présenter !
+                Prêt à rejoindre l'équipe ? Contactez-nous via Instagram ou par
+                email pour nous présenter !
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://www.instagram.com/cospital/"
+                  href="https://www.instagram.com/association_cospital/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-orange-400 text-white px-8 py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all hover:scale-105"
