@@ -20,9 +20,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <img 
-              src={logo} 
-              alt="Cosp'ital Logo" 
+            <img
+              src={logo}
+              alt="Cosp'ital Logo"
               className="h-12 md:h-16 w-auto transition-transform group-hover:scale-105"
             />
           </a>
@@ -55,7 +55,11 @@ const Header = () => {
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -75,7 +79,7 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="https://www.instagram.com/cospital/"
+              href="https://www.instagram.com/association_cospital/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-3 rounded-full font-bold hover:bg-primary/90 transition-all mt-2"

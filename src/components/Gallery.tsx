@@ -86,7 +86,7 @@ const Gallery = () => {
       category: "Hôpital",
       location: "Hôpital Lenval, Nice",
       cosplayers: [
-        "Neytiria_",
+        "Neyti_cosplay",
         "Geoffrey_flex",
         "Firedaxx",
         "Lucie.carbone",

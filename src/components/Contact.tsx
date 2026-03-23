@@ -71,7 +71,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="mailto:contact@cospital.fr"
+                href="mailto:association.cospital@orange.fr"
                 className="flex items-center gap-4 bg-gradient-warm p-6 rounded-2xl border border-border hover:shadow-soft transition-all duration-300 hover:-translate-y-1 group"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
@@ -81,7 +81,9 @@ const Contact = () => {
                   <h3 className="font-display text-lg text-foreground">
                     Email
                   </h3>
-                  <p className="text-muted-foreground">contact@cospital.fr</p>
+                  <p className="text-muted-foreground">
+                    association.cospital@orange.fr
+                  </p>
                 </div>
               </a>
 
