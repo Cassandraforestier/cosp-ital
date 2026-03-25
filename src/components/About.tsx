@@ -4,7 +4,7 @@ const About = () => {
   const stats = [
     { icon: Users, value: "20+", label: "Cosplayers actifs" },
     { icon: Heart, value: "10+", label: "Visites réalisées" },
-    { icon: Calendar, value: "2023", label: "Année de création" },
+    { icon: Calendar, value: "2024", label: "Année de création" },
     { icon: Sparkles, value: "∞", label: "Sourires partagés" },
   ];
 
@@ -21,7 +21,7 @@ const About = () => {
               Une équipe de <span className="text-primary">passionnés</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Cosp'ital est né de l'envie de partager notre passion du cosplay 
+              Cosp'ital est né de l'envie de partager notre passion du cosplay
               pour apporter un peu de magie à ceux qui en ont le plus besoin.
             </p>
           </div>
@@ -36,10 +36,12 @@ const About = () => {
                   Notre histoire
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Fondée par <strong className="text-foreground">Julien Faure</strong> et 
-                  un groupe de cosplayers passionnés, l'Association Cosp'ital s'est donné 
-                  pour mission d'utiliser l'univers du cosplay et de la pop culture pour 
-                  égayer le quotidien des enfants hospitalisés.
+                  Fondée par{" "}
+                  <strong className="text-foreground">Julien Faure</strong> et
+                  un groupe de cosplayers passionnés, l'Association Cosp'ital
+                  s'est donné pour mission d'utiliser l'univers du cosplay et de
+                  la pop culture pour égayer le quotidien des enfants
+                  hospitalisés.
                 </p>
               </div>
 
@@ -49,10 +51,10 @@ const About = () => {
                   Notre équipe
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nous sommes une équipe diverse de cosplayers de tous horizons : 
-                  super-héros Marvel et DC, personnages Disney, héros d'anime, 
-                  et bien d'autres univers fantastiques ! Chacun apporte sa créativité 
-                  et son cœur à nos interventions.
+                  Nous sommes une équipe diverse de cosplayers de tous horizons
+                  : super-héros Marvel et DC, personnages Disney, héros d'anime,
+                  et bien d'autres univers fantastiques ! Chacun apporte sa
+                  créativité et son cœur à nos interventions.
                 </p>
               </div>
             </div>
@@ -86,10 +88,13 @@ const About = () => {
                 <h3 className="font-display text-2xl text-foreground mb-2">
                   Julien Faure
                 </h3>
-                <p className="text-primary font-bold mb-2">Président & Fondateur</p>
+                <p className="text-primary font-bold mb-2">
+                  Président & Fondateur
+                </p>
                 <p className="text-muted-foreground">
-                  "Notre plus grande récompense, c'est de voir les yeux des enfants 
-                  s'illuminer quand leurs héros préférés entrent dans leur chambre."
+                  "Notre plus grande récompense, c'est de voir les yeux des
+                  enfants s'illuminer quand leurs héros préférés entrent dans
+                  leur chambre."
                 </p>
               </div>
             </div>

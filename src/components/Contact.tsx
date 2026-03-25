@@ -109,6 +109,9 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4">
                   Association loi 1901 à but non lucratif
                 </p>
+                <p className="text-muted-foreground mb-4">
+                  Reconnue d'intérêt général
+                </p>
                 <p className="text-muted-foreground text-sm">
                   Président : Julien Faure
                 </p>
